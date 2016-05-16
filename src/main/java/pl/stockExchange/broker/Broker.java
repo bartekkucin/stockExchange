@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import pl.stockExchange.bank.helper.SavedShare;
+import pl.stockExchange.stock.model.to.CompanyTo;
 import pl.stockExchange.stock.model.to.ShareTo;
 import pl.stockExchange.stock.service.stockExchangeService.IStockExchangeService;
 
@@ -80,5 +81,10 @@ public class Broker implements IBrokerOffice {
     	
         return BigDecimal.ONE.add(sellPromise).multiply(value);
     }
+
+	@Override
+	public CompanyTo findCompanyById(Long id) {
+		return stockExchangeService.findCompanyById(id);
+	}
 
 }

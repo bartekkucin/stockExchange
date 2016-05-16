@@ -6,6 +6,7 @@ import java.util.List;
 
 import pl.stockExchange.bank.helper.SavedShare;
 import pl.stockExchange.stock.model.entity.ShareEntity;
+import pl.stockExchange.stock.model.to.CompanyTo;
 import pl.stockExchange.stock.model.to.ShareTo;
 
 public interface IBrokerOffice {
@@ -15,6 +16,8 @@ public interface IBrokerOffice {
 	List<ShareTo> findSharesByCompanyId(Long id);
 
 	List<ShareTo> findSharesByDate(Date date);
+	
+	CompanyTo findCompanyById(Long id);
 	
 	List<ShareTo> findSharesByCompanyNameAndAddBrokerPromise(String companyName);
 	
