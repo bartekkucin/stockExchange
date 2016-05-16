@@ -54,9 +54,6 @@ public class App {
 	@Autowired
 	IBankService bankService;
 
-	// @Autowired
-	// Client client;
-
 	@Autowired
 	Simulator simulator;
 
@@ -79,18 +76,6 @@ public class App {
 
 		main.simulator.startSimulation(date, 10);
 
-		//
-		// List<String> shares = new ArrayList<>();
-		// shares.add("KGHM");
-
-		// main.client.setClientSerialNumber("123");
-		// main.client.setShareWallet(shareWalletManager.createShareWallet("123"));
-		//// main.client.buyShares(shares);
-		//// main.client.sellShares(shares);
-		// main.client.initDecisions(date);
-
-		// List<ShareTo> shar = shareCSVReader.getDataForShareTo(filePath);
-		// System.out.print(main.sampleService.getHelloWorld());
 
 	}
 }

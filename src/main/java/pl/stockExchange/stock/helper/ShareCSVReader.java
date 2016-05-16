@@ -39,7 +39,6 @@ import pl.stockExchange.stock.model.to.ShareTo;
 public class ShareCSVReader {
 
 	public List<CompanyTo> getDataForCompanyTo(String filePath) throws IOException {
-		Long id = 0L;
 		List<ShareTo> shareList = new ArrayList<>();
 		HashMap<String, List<ShareTo>> shares = new HashMap<>();
 
@@ -74,37 +73,6 @@ public class ShareCSVReader {
 		return compList;
 	}
 
-	// public List<ShareTo> getDataForShareTo(String filePath) throws
-	// IOException {
-	// Long id = 0L;
-	// List<CompanyTo> company = getDataForCompanyTo(filePath);
-	// List<ShareTo> share = new ArrayList<>();
-	// try {
-	// BufferedReader bufferedReader = new BufferedReader(new
-	// FileReader(filePath));
-	// String line;
-	// while ((line = bufferedReader.readLine()) != null) {
-	// String[] data = line.split(",");
-	// if (data.length == 3) {
-	// Double price = Double.parseDouble(data[2]);
-	// id++;
-	// String companyName = data[0];
-	// Date date = string2date(data[1]);
-	// for (CompanyTo comp : company) {
-	// if (companyName.equals(comp.getCompanyName())) {
-	// share.add(new ShareTo(id, comp, price, date));
-	// }
-	// }
-	//
-	// }
-	// }
-	// bufferedReader.close();
-	// } catch (FileNotFoundException e) {
-	// // TODO Auto-generated catch block
-	// e.printStackTrace();
-	// }
-	// return share;
-	// }
 
 	private static Date string2date(String sDate) {
 		SimpleDateFormat formater = new SimpleDateFormat("yyyyMMdd");
